@@ -19,12 +19,13 @@ def main():
                 return
 
         screen.fill("black")
+
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
 
         delta = clock.tick(60)  # clock.tick() returns ms since last tick
         dt = delta / 1000  # sets the delta time to seconds since last tick
-        print(dt)
 
 
 if __name__ == "__main__":
