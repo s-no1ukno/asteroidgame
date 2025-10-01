@@ -6,6 +6,9 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+    clock = pygame.time.Clock()
+    dt = 0
+
     # initialization of game loop
     while True:
         for event in pygame.event.get():
@@ -14,6 +17,9 @@ def main():
 
         screen.fill("black")
         pygame.display.flip()
+
+        delta = clock.tick(60)  # clock.tick() returns ms since last tick
+        dt = delta / 1000  # sets the delta time to seconds since last tick
 
 
 if __name__ == "__main__":
