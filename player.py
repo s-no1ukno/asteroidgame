@@ -42,7 +42,6 @@ class Player(CircleShape):
             0, 1).rotate(self.rotation) * PLAYER_SHOOT_SPEED
 
     def update(self, dt):
-        print(f"Shot timer ==> : {self.shot_timer}")
         self.shot_timer -= dt
         keys = pygame.key.get_pressed()
 
